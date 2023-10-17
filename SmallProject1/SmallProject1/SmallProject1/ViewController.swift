@@ -9,10 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private let tableView: UITableView = {
-        let tableView = UITableView()
-        return tableView
-    }()
+    let tableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +42,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = FlagCell()
         return cell
     }
 }
