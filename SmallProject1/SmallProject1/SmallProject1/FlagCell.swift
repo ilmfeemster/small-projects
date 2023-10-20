@@ -8,7 +8,15 @@
 import UIKit
 
 class FlagCell: UITableViewCell {
-    var flagImageView = UIImageView()
+    
+    var flagImageView: UIImageView = {
+        let iv = UIImageView()
+        iv.contentMode = .scaleAspectFit
+        iv.image = UIImage(systemName: "questionmark")
+        iv.tintColor = .label
+        return iv
+    }()
+    
     var countryNameLabel = UILabel()
     static let identifier = "flagCell"
     
@@ -25,21 +33,28 @@ class FlagCell: UITableViewCell {
     }
     
     func configureNameLabel() {
+        countryNameLabel.translatesAutoresizingMaskIntoConstraints = false
         countryNameLabel.adjustsFontSizeToFitWidth = true
+        countryNameLabel.text = "Error"
     }
     
     func configureImageView() {
-        flagImageView.image = UIImage(named: "US")
+        flagImageView.translatesAutoresizingMaskIntoConstraints = false
     }
     
     // MARK: - UI Setup
     private func setupUI() {
+        configureNameLabel()
+        configureImageView()
     
         NSLayoutConstraint.activate([
             flagImageView.topAnchor.constraint(equalTo: self.contentView.topAnchor),
             flagImageView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor),
             flagImageView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
             flagImageView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor),
+            
+            flagImageView.heightAnchor.constraint(equalToConstant: 90),
+            flagImageView.widthAnchor.constraint(equalToConstant: 90),
             
             flagImageView.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor),
             flagImageView.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor),

@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     
     private func setupUI() {
         view.addSubview(tableView)
+        self.tableView.register(FlagCell.self, forCellReuseIdentifier: FlagCell.identifier)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -42,7 +43,9 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = FlagCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: FlagCell.identifier, for: indexPath) as! FlagCell
+        let image = UIImage(named: "US")
+        cell.flagImageView.image = image
         return cell
     }
 }
