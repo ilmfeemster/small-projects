@@ -12,6 +12,7 @@
 		0013481D2AD0429B009F653D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0013481C2AD0429B009F653D /* ViewController.swift */; };
 		001348222AD042A2009F653D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 001348212AD042A2009F653D /* Assets.xcassets */; };
 		001348252AD042A2009F653D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 001348232AD042A2009F653D /* LaunchScreen.storyboard */; };
+		0059914A2AE45F1D000BC1E0 /* FlagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005991492AE45F1D000BC1E0 /* FlagViewController.swift */; };
 		007875672AD58C5F003C1E19 /* FlagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007875662AD58C5F003C1E19 /* FlagCell.swift */; };
 		007875692AD58E08003C1E19 /* Flags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007875682AD58E08003C1E19 /* Flags.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,7 @@
 		001348212AD042A2009F653D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		001348242AD042A2009F653D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		001348262AD042A2009F653D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		005991492AE45F1D000BC1E0 /* FlagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagViewController.swift; sourceTree = "<group>"; };
 		007875662AD58C5F003C1E19 /* FlagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagCell.swift; sourceTree = "<group>"; };
 		007875682AD58E08003C1E19 /* Flags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flags.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,6 +64,7 @@
 				0013482C2AD04441009F653D /* Supporting */,
 				0013481C2AD0429B009F653D /* ViewController.swift */,
 				007875662AD58C5F003C1E19 /* FlagCell.swift */,
+				005991492AE45F1D000BC1E0 /* FlagViewController.swift */,
 				001348262AD042A2009F653D /* Info.plist */,
 			);
 			path = SmallProject1;
@@ -152,6 +155,7 @@
 				001348192AD0429B009F653D /* AppDelegate.swift in Sources */,
 				007875692AD58E08003C1E19 /* Flags.swift in Sources */,
 				0013481B2AD0429B009F653D /* SceneDelegate.swift in Sources */,
+				0059914A2AE45F1D000BC1E0 /* FlagViewController.swift in Sources */,
 				007875672AD58C5F003C1E19 /* FlagCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

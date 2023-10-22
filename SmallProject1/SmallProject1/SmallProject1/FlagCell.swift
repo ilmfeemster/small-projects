@@ -35,7 +35,6 @@ class FlagCell: UITableViewCell {
     func configureNameLabel() {
         countryNameLabel.translatesAutoresizingMaskIntoConstraints = false
         countryNameLabel.adjustsFontSizeToFitWidth = true
-        countryNameLabel.text = "Error"
     }
     
     func configureImageView() {
@@ -58,6 +57,9 @@ class FlagCell: UITableViewCell {
             
             flagImageView.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor),
             flagImageView.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor),
+            
+            countryNameLabel.leadingAnchor.constraint(equalTo: flagImageView.trailingAnchor, constant: 12),
+            countryNameLabel.centerYAnchor.constraint(equalTo: flagImageView.centerYAnchor),
         ])
     }
 }

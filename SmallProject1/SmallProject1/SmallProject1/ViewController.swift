@@ -10,6 +10,20 @@ import UIKit
 class ViewController: UIViewController {
     
     let tableView = UITableView()
+    let countries = [
+        "Estonia",
+        "France",
+        "Germany",
+        "Ireland",
+        "Italy",
+        "Monaco",
+        "Nigeria",
+        "Poland",
+        "Russia",
+        "Spain",
+        "UK",
+        "US"
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,14 +53,25 @@ class ViewController: UIViewController {
 extension ViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return countries.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FlagCell.identifier, for: indexPath) as! FlagCell
-        let image = UIImage(named: "US")
+        let country = countries[indexPath.row]
+        let image = UIImage(named: country)
         cell.flagImageView.image = image
+        cell.countryNameLabel.text = country
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = FlagViewController()
+        self.present(vc, animated: true)
     }
 }
 
