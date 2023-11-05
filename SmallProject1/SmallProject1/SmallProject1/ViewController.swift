@@ -71,7 +71,9 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = FlagViewController()
-        self.present(vc, animated: true)
+        let image = UIImage(named: countries[indexPath.row])
+        vc.flagView.image = image
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
